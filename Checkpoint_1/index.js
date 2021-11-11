@@ -14,30 +14,28 @@ pré-definidos.
 - Opções não listadas no menu, exibir uma mensagem de erro: "Prato inexistente";
 - Se o tempo for 3x maior que o necessário para o prato, o microondas deve exibir a mensagem: “kabumm”;
 - No final de cada tarefa, o microondas deve exibir a mensagem: "Prato pronto, bom apetite !!!". */
-
-let pipoca = 10;
-let macarrão = 8;
-let carne = 15;
-let feijão = 12;
-let brigadeiro = 8;
+let prato = ["pipoca","macarrao", "carne","feijao","brigadeiro"];
+let tempoPadrao = 0;
 
 function esquentar(comida, tempo) {
-      
-      if (tempo > comida && tempo <= comida * 2){
+      comida=="pipoca"? tempoPadrao=10:0;
+      comida=="macarrao"? tempoPadrao=8:0;
+      comida=="carne"? tempoPadrao=15:0;
+      comida=="feijao"? tempoPadrao=12:0;
+      comida=="brigadeiro"?tempoPadrao=8:0;
+      if (tempo >= tempoPadrao && tempo < tempoPadrao * 2){
             console.log("Prato pronto, bom apetite!!!")
-      } else if (tempo >= comida * 2 && tempo < comida * 3) {
+      } else if (tempo >= tempoPadrao * 2 && tempo < tempoPadrao * 3) {
             console.log("A comida queimou\nPrato pronto, bom apetite!!!")
             
-      } else if (tempo >= comida * 3) {
+      } else if (tempo >= tempoPadrao * 3) {
             console.log("Kabumm\nPrato pronto, bom apetite!!!")
             
-      } else if (tempo < comida) {
+      } else if (tempo < tempoPadrao) {
             console.log("Tempo insuficiente\nPrato pronto, bom apetite!!!")
-      } 
+      }  else console.log("Prato inexistente")
+
 
 }
 
-esquentar(pipoca, 21)
-
-
-
+esquentar(prato[4], 7)
