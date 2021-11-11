@@ -23,19 +23,14 @@ function esquentar(comida, tempo) {
       comida=="carne"? tempoPadrao=15:0;
       comida=="feijao"? tempoPadrao=12:0;
       comida=="brigadeiro"?tempoPadrao=8:0;
-      if (tempo >= tempoPadrao && tempo < tempoPadrao * 2){
+      if (tempo >= tempoPadrao && tempo < tempoPadrao *2){
             console.log("Prato pronto, bom apetite!!!")
-      } else if (tempo >= tempoPadrao * 2 && tempo < tempoPadrao * 3) {
-            console.log("A comida queimou\nPrato pronto, bom apetite!!!")
-            
-      } else if (tempo >= tempoPadrao * 3) {
-            console.log("Kabumm\nPrato pronto, bom apetite!!!")
-            
-      } else if (tempo < tempoPadrao) {
+      } else if (tempo >= tempoPadrao * 2 && tempo < tempoPadrao *3){
+            console.log("A comida queimou\nPrato pronto, bom apetite!!!")     
+      } else if (tempo >= tempoPadrao * 3){
+            console.log("Kabumm\nPrato pronto, bom apetite!!!")  
+      } else if (tempo < tempoPadrao){
             console.log("Tempo insuficiente\nPrato pronto, bom apetite!!!")
-      }  else console.log("Prato inexistente")
-
-
+      } else console.log("Prato inexistente")
 }
-
-esquentar(prato[4], 7)
+esquentar(prato[2], 29);
