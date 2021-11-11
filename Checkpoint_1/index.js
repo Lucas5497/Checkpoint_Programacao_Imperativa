@@ -17,7 +17,7 @@ pré-definidos.
 let prato = ["pipoca","macarrao", "carne","feijao","brigadeiro"];
 let tempoPadrao = 0;
 
-function esquentar(comida, tempo) {
+function esquentar(comida, tempo){
       comida=="pipoca"? tempoPadrao=10:0;
       comida=="macarrao"? tempoPadrao=8:0;
       comida=="carne"? tempoPadrao=15:0;
@@ -25,12 +25,14 @@ function esquentar(comida, tempo) {
       comida=="brigadeiro"?tempoPadrao=8:0;
       if (tempo >= tempoPadrao && tempo < tempoPadrao *2){
             console.log("Prato pronto, bom apetite!!!")
-      } else if (tempo >= tempoPadrao * 2 && tempo < tempoPadrao *3){
+      } else if (tempo >= tempoPadrao *2 && tempo < tempoPadrao *3){
             console.log("A comida queimou\nPrato pronto, bom apetite!!!")     
-      } else if (tempo >= tempoPadrao * 3){
+      } else if (tempo >= tempoPadrao *3){
             console.log("Kabumm\nPrato pronto, bom apetite!!!")  
       } else if (tempo < tempoPadrao){
             console.log("Tempo insuficiente\nPrato pronto, bom apetite!!!")
-      } else console.log("Prato inexistente")
+      } else if (prato!=comida){
+            console.log("Prato inexistente :(")
+      }
 }
-esquentar(prato[2], 29);
+esquentar(prato[4],4);
